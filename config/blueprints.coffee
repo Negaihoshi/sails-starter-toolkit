@@ -21,7 +21,7 @@ http://sailsjs.org/#/documentation/reference/blueprint-api
 For more information on the settings in this file, see:
 http://sailsjs.org/#/documentation/reference/sails.config/sails.config.blueprints.html
 ###
-module.exports.blueprints = {}
+module.exports.blueprints = {
 
 ###*
 Action routes speed up the backend development workflow by               *
@@ -40,7 +40,7 @@ inadvertently expose unsafe/unintentional controller logic to GET        *
 requests.                                                                *
 ###
 
-# actions: true,
+actions: true,
 
 ###*
 RESTful routes (`sails.config.blueprints.rest`)                          *
@@ -63,7 +63,7 @@ in a production scenario, as long you take standard security precautions *
 (combine w/ policies, etc.)                                              *
 ###
 
-# rest: true,
+rest: false,
 
 ###*
 Shortcut routes are simple helpers to provide access to a                *
@@ -75,7 +75,7 @@ controller's`find`, `create`, `update`, and `destroy` actions.           *
 production.                                                              *
 ###
 
-# shortcuts: true,
+shortcuts: true,
 
 ###*
 An optional mount path for all blueprint routes on a controller,         *
@@ -87,7 +87,7 @@ methods.                                                                 *
 `sails.config.routes`)                                                   *
 ###
 
-# prefix: '',
+prefix: '',
 
 ###*
 Whether to pluralize controller names in blueprint routes.               *
@@ -103,7 +103,7 @@ PUT /foos/:id?                                                           *
 DELETE /foos/:id?                                                        *
 ###
 
-# pluralize: false,
+pluralize: false,
 
 ###*
 Whether the blueprint controllers should populate model fetches with     *
@@ -113,14 +113,14 @@ If you have a lot of data in one-to-many associations, leaving this on   *
 may result in very heavy api calls                                       *
 ###
 
-# populate: true,
+populate: true,
 
 ###*
 Whether to run Model.watch() in the find and findOne blueprint actions.   *
 Can be overridden on a per-model basis.                                   *
 ###
 
-# autoWatch: true,
+autoWatch: true,
 
 ###*
 The default number of records to show in the response from a "find"       *
@@ -128,4 +128,5 @@ action. Doubles as the default size of populated arrays if populate is    *
 true.                                                                     *
 ###
 
-# defaultLimit: 30
+defaultLimit: 30
+}

@@ -27,8 +27,13 @@ etc. depending on your default view engine) your home page.              *
 (Alternatively, remove this and add an `index.html` file in your         *
 `assets` directory)                                                      *
 ###
-module.exports.routes = "/":
-  view: "homepage"
+module.exports.routes =
+  "/":
+    view: "homepage"
+
+  "/test/index":
+    controller: 'test',
+    action: 'index'
 
 ###*
 Custom routes here...                                                    *

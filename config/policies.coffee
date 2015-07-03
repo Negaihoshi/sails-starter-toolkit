@@ -15,14 +15,14 @@ http://sailsjs.org/#/documentation/concepts/Policies
 For more information on configuring policies, check out:
 http://sailsjs.org/#/documentation/reference/sails.config/sails.config.policies.html
 ###
-module.exports.policies = {}
+module.exports.policies = {
 
 ###*
 Default policy for all controllers and actions (`true` allows public     *
 access)                                                                  *
 ###
 
-# '*': true,
+'*': true,
 
 ###*
 Here's an example of mapping some policies to run before a controller    *
@@ -42,4 +42,4 @@ and its actions                                                          *
 # Apply the `isNiceToAnimals` AND `hasRabbitFood` policies
 # before letting any users feed our rabbits
 # feed : ['isNiceToAnimals', 'hasRabbitFood']
-# }
+}

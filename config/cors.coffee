@@ -24,7 +24,7 @@ origin: 'http://foobar.com,https://owlhoot.com'
 For more information on this configuration file, see:
 http://sailsjs.org/#/documentation/reference/sails.config/sails.config.cors.html
 ###
-module.exports.cors = {}
+module.exports.cors =
 
 ###*
 Allow CORS on all routes by default? If not, you must enable CORS on a   *
@@ -33,7 +33,7 @@ route config, or setting "cors:true" in the route config to use the      *
 default settings below.                                                  *
 ###
 
-# allRoutes: false,
+allRoutes: false,
 
 ###*
 Which domains which are allowed CORS access? This can be a               *
@@ -41,24 +41,24 @@ comma-delimited list of hosts (beginning with http:// or https://) or    *
 "*" to allow all domains CORS access.                                    *
 ###
 
-# origin: '*',
+origin: '*',
 
 ###*
 Allow cookies to be shared for CORS requests?                            *
 ###
 
-# credentials: true,
+credentials: true,
 
 ###*
 Which methods should be allowed for CORS requests? This is only used in  *
 response to preflight requests (see article linked above for more info)  *
 ###
 
-# methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
+methods: 'GET, POST, PUT, DELETE, OPTIONS, HEAD',
 
 ###*
 Which headers should be allowed for CORS requests? This is only used in  *
 response to preflight requests.                                          *
 ###
 
-# headers: 'content-type'
+headers: 'content-type'
